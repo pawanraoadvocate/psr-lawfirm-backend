@@ -1,0 +1,32 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from app.routes import clients, cases, auth, documents, hearings
+
+app = FastAPI(
+    title="PSR Law Offices API",
+    version="1.0.0",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(auth.router,      prefix="/auth",      tags=["Auth"])
+app.include_router(clients.router,   prefix="/clients",   tags=["Clients"])
+app.include_router(cases.router,     prefix="/cases",     tags=["Cases"])
+app.include_router(documents.router, prefix="/documents", tags=["Documents"])
+app.include_router(hearings.router,  prefix="/hearings",  tags=["Hearings"])
+
+
+@app.get("/")
+def root():
+    return {"status": "PSR Law Offices API is running", "version": "1.0.0"}
+
+
+@app.get("/health")
+def health():
+    return {"health": "ok"}

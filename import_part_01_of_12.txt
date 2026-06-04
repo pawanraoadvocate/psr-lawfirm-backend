@@ -1,0 +1,1475 @@
+// -------------------------------------------------------
+// eCourts Import Script - Part 1 of 12
+// Cases 1 to 50 of 573 total
+// Trigger: Standalone Workflow - Run ONCE per part
+// Replace "your_app_name" with your actual app link name
+// -------------------------------------------------------
+
+okCount   = 0;
+dupCount  = 0;
+failCount = 0;
+
+// Case 01: HRGR010005632021
+cM1 = Map();
+cM1.put("CNR_Number","HRGR010005632021");
+cM1.put("Case_Number","BA/187/2021");
+cM1.put("Case_Type","Bail Application");
+cM1.put("Court_Name","District and Sessions Courts, Gurugram");
+cM1.put("Court_State","Haryana");
+cM1.put("District","Gurugram");
+cM1.put("Petitioner_Name","SANDEEP");
+cM1.put("Respondent_Name","State of Haryana");
+cM1.put("Last_Hearing_Date","2021-01-25");
+cM1.put("Filing_Date","2021-01-01");
+cM1.put("Case_Status","Disposed");
+cM1.put("Priority","Medium");
+cM1.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: ALLOWED");
+eR1 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010005632021\"");
+if(eR1.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR1 = zoho.creator.addRecord("your_app_name","Case_Master",cM1);
+ if(aR1.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 02: HRGR010001252021
+cM2 = Map();
+cM2.put("CNR_Number","HRGR010001252021");
+cM2.put("Case_Number","BA/37/2021");
+cM2.put("Case_Type","Bail Application");
+cM2.put("Court_Name","District and Sessions Courts, Gurugram");
+cM2.put("Court_State","Haryana");
+cM2.put("District","Gurugram");
+cM2.put("Petitioner_Name","DHANANJAY@SURAJ");
+cM2.put("Respondent_Name","State of Haryana");
+cM2.put("Last_Hearing_Date","2021-01-07");
+cM2.put("Filing_Date","2021-01-01");
+cM2.put("Case_Status","Disposed");
+cM2.put("Priority","Medium");
+cM2.put("Notes","Purpose: Appearance | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR2 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010001252021\"");
+if(eR2.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR2 = zoho.creator.addRecord("your_app_name","Case_Master",cM2);
+ if(aR2.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 03: HRGR030016342021
+cM3 = Map();
+cM3.put("CNR_Number","HRGR030016342021");
+cM3.put("Case_Number","CHI/115/2021");
+cM3.put("Case_Type","Criminal");
+cM3.put("Court_Name","Criminal Courts, Gurugram");
+cM3.put("Court_State","Haryana");
+cM3.put("District","Gurugram");
+cM3.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM3.put("Respondent_Name","SONU");
+cM3.put("Last_Hearing_Date","2021-02-12");
+cM3.put("Filing_Date","2021-01-01");
+cM3.put("Case_Status","Disposed");
+cM3.put("Priority","Medium");
+cM3.put("Notes","Purpose: Appearance | Court: Judicial Magistrate -  Ist Class | Disp: COMMITTED");
+eR3 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030016342021\"");
+if(eR3.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR3 = zoho.creator.addRecord("your_app_name","Case_Master",cM3);
+ if(aR3.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 04: HRGR030772162018
+cM4 = Map();
+cM4.put("CNR_Number","HRGR030772162018");
+cM4.put("Case_Number","CHA/7760/2018");
+cM4.put("Case_Type","Criminal");
+cM4.put("Court_Name","Criminal Courts, Gurugram");
+cM4.put("Court_State","Haryana");
+cM4.put("District","Gurugram");
+cM4.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM4.put("Respondent_Name","AJAY");
+cM4.put("Last_Hearing_Date","2025-03-25");
+cM4.put("Filing_Date","2018-01-01");
+cM4.put("Case_Status","Disposed");
+cM4.put("Priority","Medium");
+cM4.put("Notes","Purpose: Defence Evidence | Court: Judicial Magistrate -  Ist Class | Disp: ACQUITTED");
+eR4 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030772162018\"");
+if(eR4.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR4 = zoho.creator.addRecord("your_app_name","Case_Master",cM4);
+ if(aR4.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 05: HRGR030350492017
+cM5 = Map();
+cM5.put("CNR_Number","HRGR030350492017");
+cM5.put("Case_Number","CHI/2632/2017");
+cM5.put("Case_Type","Criminal");
+cM5.put("Court_Name","Criminal Courts, Gurugram");
+cM5.put("Court_State","Haryana");
+cM5.put("District","Gurugram");
+cM5.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM5.put("Respondent_Name","SANJAY");
+cM5.put("Last_Hearing_Date","2023-09-01");
+cM5.put("Filing_Date","2017-01-01");
+cM5.put("Case_Status","Disposed");
+cM5.put("Priority","Medium");
+cM5.put("Notes","Purpose: Prosecution Evidence | Court: Judicial Magistrate -  Ist Class | Disp: COMPOUNDED AND DISPOSED OF.");
+eR5 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030350492017\"");
+if(eR5.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR5 = zoho.creator.addRecord("your_app_name","Case_Master",cM5);
+ if(aR5.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 06: HRGR010022652019
+cM6 = Map();
+cM6.put("CNR_Number","HRGR010022652019");
+cM6.put("Case_Number","MACP/113/2019");
+cM6.put("Case_Type","MACT");
+cM6.put("Court_Name","District and Sessions Courts, Gurugram");
+cM6.put("Court_State","Haryana");
+cM6.put("District","Gurugram");
+cM6.put("Petitioner_Name","SEEMA KAUR");
+cM6.put("Respondent_Name","ABHINANDNA");
+cM6.put("Last_Hearing_Date","2021-03-24");
+cM6.put("Filing_Date","2019-01-01");
+cM6.put("Case_Status","Disposed");
+cM6.put("Priority","Medium");
+cM6.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: PARTLY ALLOWED");
+eR6 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010022652019\"");
+if(eR6.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR6 = zoho.creator.addRecord("your_app_name","Case_Master",cM6);
+ if(aR6.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 07: HRGR010052052019
+cM7 = Map();
+cM7.put("CNR_Number","HRGR010052052019");
+cM7.put("Case_Number","MACP/247/2019");
+cM7.put("Case_Type","MACT");
+cM7.put("Court_Name","District and Sessions Courts, Gurugram");
+cM7.put("Court_State","Haryana");
+cM7.put("District","Gurugram");
+cM7.put("Petitioner_Name","MOHAR SINGH");
+cM7.put("Respondent_Name","SANJAY YADAV");
+cM7.put("Last_Hearing_Date","2023-07-31");
+cM7.put("Filing_Date","2019-01-01");
+cM7.put("Case_Status","Disposed");
+cM7.put("Priority","Medium");
+cM7.put("Notes","Purpose: Rebuttal | Court: Additional District and Sessions Judge | Disp: PARTLY ALLOWED");
+eR7 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010052052019\"");
+if(eR7.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR7 = zoho.creator.addRecord("your_app_name","Case_Master",cM7);
+ if(aR7.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 08: HRGR010005462018
+cM8 = Map();
+cM8.put("CNR_Number","HRGR010005462018");
+cM8.put("Case_Number","MACP/20/2018");
+cM8.put("Case_Type","MACT");
+cM8.put("Court_Name","District and Sessions Courts, Gurugram");
+cM8.put("Court_State","Haryana");
+cM8.put("District","Gurugram");
+cM8.put("Petitioner_Name","ETESH YADAV");
+cM8.put("Respondent_Name","PARIXIT SINGH");
+cM8.put("Last_Hearing_Date","2023-10-03");
+cM8.put("Filing_Date","2018-01-01");
+cM8.put("Case_Status","Disposed");
+cM8.put("Priority","Medium");
+cM8.put("Notes","Purpose: Rebuttal | Court: Additional District and Sessions Judge | Disp: ALLOWED");
+eR8 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010005462018\"");
+if(eR8.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR8 = zoho.creator.addRecord("your_app_name","Case_Master",cM8);
+ if(aR8.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 09: HRGR010141472018
+cM9 = Map();
+cM9.put("CNR_Number","HRGR010141472018");
+cM9.put("Case_Number","CRA/425/2018");
+cM9.put("Case_Type","Criminal Appeal");
+cM9.put("Court_Name","District and Sessions Courts, Gurugram");
+cM9.put("Court_State","Haryana");
+cM9.put("District","Gurugram");
+cM9.put("Petitioner_Name","M/S PAL INFRASTRUCUTRE AND DEVELOPERS PVT LTD");
+cM9.put("Respondent_Name","BABU LAL");
+cM9.put("Last_Hearing_Date","2022-06-07");
+cM9.put("Filing_Date","2018-01-01");
+cM9.put("Case_Status","Disposed");
+cM9.put("Priority","Medium");
+cM9.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR9 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141472018\"");
+if(eR9.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR9 = zoho.creator.addRecord("your_app_name","Case_Master",cM9);
+ if(aR9.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 10: HRGR010141452018
+cM10 = Map();
+cM10.put("CNR_Number","HRGR010141452018");
+cM10.put("Case_Number","CRA/422/2018");
+cM10.put("Case_Type","Criminal Appeal");
+cM10.put("Court_Name","District and Sessions Courts, Gurugram");
+cM10.put("Court_State","Haryana");
+cM10.put("District","Gurugram");
+cM10.put("Petitioner_Name","M/S PAL INFRASTRUCUTRE AND DEVELOPERS PVT LTD");
+cM10.put("Respondent_Name","BABU LAL");
+cM10.put("Last_Hearing_Date","2022-06-07");
+cM10.put("Filing_Date","2018-01-01");
+cM10.put("Case_Status","Disposed");
+cM10.put("Priority","Medium");
+cM10.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR10 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141452018\"");
+if(eR10.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR10 = zoho.creator.addRecord("your_app_name","Case_Master",cM10);
+ if(aR10.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 11: HRGR010141392018
+cM11 = Map();
+cM11.put("CNR_Number","HRGR010141392018");
+cM11.put("Case_Number","CRA/421/2018");
+cM11.put("Case_Type","Criminal Appeal");
+cM11.put("Court_Name","District and Sessions Courts, Gurugram");
+cM11.put("Court_State","Haryana");
+cM11.put("District","Gurugram");
+cM11.put("Petitioner_Name","M/S PAL INFRASTRUCTURE AND DEVELOPERS PVT LTD");
+cM11.put("Respondent_Name","BABU LAL");
+cM11.put("Last_Hearing_Date","2022-06-07");
+cM11.put("Filing_Date","2018-01-01");
+cM11.put("Case_Status","Disposed");
+cM11.put("Priority","Medium");
+cM11.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR11 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141392018\"");
+if(eR11.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR11 = zoho.creator.addRecord("your_app_name","Case_Master",cM11);
+ if(aR11.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 12: HRGR010141402018
+cM12 = Map();
+cM12.put("CNR_Number","HRGR010141402018");
+cM12.put("Case_Number","CRA/418/2018");
+cM12.put("Case_Type","Criminal Appeal");
+cM12.put("Court_Name","District and Sessions Courts, Gurugram");
+cM12.put("Court_State","Haryana");
+cM12.put("District","Gurugram");
+cM12.put("Petitioner_Name","M/S PAL INFRASTRUCTURE AND DEVELOPERS PVT LTD");
+cM12.put("Respondent_Name","BABU LAL");
+cM12.put("Last_Hearing_Date","2022-06-07");
+cM12.put("Filing_Date","2018-01-01");
+cM12.put("Case_Status","Disposed");
+cM12.put("Priority","Medium");
+cM12.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR12 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141402018\"");
+if(eR12.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR12 = zoho.creator.addRecord("your_app_name","Case_Master",cM12);
+ if(aR12.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 13: HRGR010141492018
+cM13 = Map();
+cM13.put("CNR_Number","HRGR010141492018");
+cM13.put("Case_Number","CRA/424/2018");
+cM13.put("Case_Type","Criminal Appeal");
+cM13.put("Court_Name","District and Sessions Courts, Gurugram");
+cM13.put("Court_State","Haryana");
+cM13.put("District","Gurugram");
+cM13.put("Petitioner_Name","M/S MAHADEV MUTUAL BENEFITS CO LTD");
+cM13.put("Respondent_Name","RAJ KUMAR");
+cM13.put("Last_Hearing_Date","2022-06-07");
+cM13.put("Filing_Date","2018-01-01");
+cM13.put("Case_Status","Disposed");
+cM13.put("Priority","Medium");
+cM13.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR13 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141492018\"");
+if(eR13.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR13 = zoho.creator.addRecord("your_app_name","Case_Master",cM13);
+ if(aR13.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 14: HRGR010141422018
+cM14 = Map();
+cM14.put("CNR_Number","HRGR010141422018");
+cM14.put("Case_Number","CRA/420/2018");
+cM14.put("Case_Type","Criminal Appeal");
+cM14.put("Court_Name","District and Sessions Courts, Gurugram");
+cM14.put("Court_State","Haryana");
+cM14.put("District","Gurugram");
+cM14.put("Petitioner_Name","M/S MAHADEV MUTUAL BENEFITS COMPANY LTD");
+cM14.put("Respondent_Name","RAJ KUMAR");
+cM14.put("Last_Hearing_Date","2022-06-07");
+cM14.put("Filing_Date","2018-01-01");
+cM14.put("Case_Status","Disposed");
+cM14.put("Priority","Medium");
+cM14.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR14 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010141422018\"");
+if(eR14.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR14 = zoho.creator.addRecord("your_app_name","Case_Master",cM14);
+ if(aR14.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 15: HRGR020036122020
+cM15 = Map();
+cM15.put("CNR_Number","HRGR020036122020");
+cM15.put("Case_Number","CS/2901/2020");
+cM15.put("Case_Type","Civil Suit");
+cM15.put("Court_Name","Civil Courts, Gurugram");
+cM15.put("Court_State","Haryana");
+cM15.put("District","Gurugram");
+cM15.put("Petitioner_Name","INDERJEET YADAV");
+cM15.put("Respondent_Name","ASHOK");
+cM15.put("Next_Hearing_Date","2026-07-02");
+cM15.put("Last_Hearing_Date","2026-05-12");
+cM15.put("Filing_Date","2020-01-01");
+cM15.put("Case_Status","Pending");
+cM15.put("Priority","Medium");
+cM15.put("Notes","Purpose: CONSIDERATION | Court: Civil Judge (Junior Division)");
+eR15 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR020036122020\"");
+if(eR15.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR15 = zoho.creator.addRecord("your_app_name","Case_Master",cM15);
+ if(aR15.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 16: HRGR030751812018
+cM16 = Map();
+cM16.put("CNR_Number","HRGR030751812018");
+cM16.put("Case_Number","NACT/43030/2018");
+cM16.put("Case_Type","NACT");
+cM16.put("Court_Name","Criminal Courts, Gurugram");
+cM16.put("Court_State","Haryana");
+cM16.put("District","Gurugram");
+cM16.put("Petitioner_Name","ARUN NARULA");
+cM16.put("Respondent_Name","SANKLAP ZIBBU");
+cM16.put("Last_Hearing_Date","2026-02-20");
+cM16.put("Filing_Date","2018-01-01");
+cM16.put("Case_Status","Disposed");
+cM16.put("Priority","Medium");
+cM16.put("Notes","Purpose: Arguments | Court: Judicial Magistrate -  Ist Class | Disp: CONVICTED");
+eR16 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030751812018\"");
+if(eR16.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR16 = zoho.creator.addRecord("your_app_name","Case_Master",cM16);
+ if(aR16.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 17: HRGR030120212017
+cM17 = Map();
+cM17.put("CNR_Number","HRGR030120212017");
+cM17.put("Case_Number","CHI/911/2017");
+cM17.put("Case_Type","Criminal");
+cM17.put("Court_Name","Criminal Courts, Gurugram");
+cM17.put("Court_State","Haryana");
+cM17.put("District","Gurugram");
+cM17.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM17.put("Respondent_Name","OM PRAKASH");
+cM17.put("Next_Hearing_Date","2026-07-28");
+cM17.put("Last_Hearing_Date","2025-10-15");
+cM17.put("Filing_Date","2017-01-01");
+cM17.put("Case_Status","Pending");
+cM17.put("Priority","Medium");
+cM17.put("Notes","Purpose: Appearance | Court: Judicial Magistrate -  Ist Class");
+eR17 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030120212017\"");
+if(eR17.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR17 = zoho.creator.addRecord("your_app_name","Case_Master",cM17);
+ if(aR17.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 18: HRGR010127512017
+cM18 = Map();
+cM18.put("CNR_Number","HRGR010127512017");
+cM18.put("Case_Number","SC/645/2017");
+cM18.put("Case_Type","Civil Suit");
+cM18.put("Court_Name","District and Sessions Courts, Gurugram");
+cM18.put("Court_State","Haryana");
+cM18.put("District","Gurugram");
+cM18.put("Petitioner_Name","XXXXXXX");
+cM18.put("Respondent_Name","XXXXXXX");
+cM18.put("Last_Hearing_Date","2022-07-06");
+cM18.put("Filing_Date","2017-01-01");
+cM18.put("Case_Status","Disposed");
+cM18.put("Priority","Medium");
+cM18.put("Notes","Purpose: Order | Court: Additional Sessions Judge | Disp: CONVICTED");
+eR18 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010127512017\"");
+if(eR18.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR18 = zoho.creator.addRecord("your_app_name","Case_Master",cM18);
+ if(aR18.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 19: HRGR010079342018
+cM19 = Map();
+cM19.put("CNR_Number","HRGR010079342018");
+cM19.put("Case_Number","SC/461/2018");
+cM19.put("Case_Type","Civil Suit");
+cM19.put("Court_Name","District and Sessions Courts, Gurugram");
+cM19.put("Court_State","Haryana");
+cM19.put("District","Gurugram");
+cM19.put("Petitioner_Name","XXXXXXX");
+cM19.put("Respondent_Name","XXXXXXX");
+cM19.put("Last_Hearing_Date","2022-05-06");
+cM19.put("Filing_Date","2018-01-01");
+cM19.put("Case_Status","Disposed");
+cM19.put("Priority","Medium");
+cM19.put("Notes","Purpose: Defence Evidence | Court: Additional District and Sessions Judge | Disp: ACQUITTED");
+eR19 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010079342018\"");
+if(eR19.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR19 = zoho.creator.addRecord("your_app_name","Case_Master",cM19);
+ if(aR19.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 20: DLSW020010402016
+cM20 = Map();
+cM20.put("CNR_Number","DLSW020010402016");
+cM20.put("Case_Number","Ct. Cases/4989463/2016");
+cM20.put("Case_Type","Ct. Cases");
+cM20.put("Court_Name","Chief Metropolitan Magistrate, South-West, DWK");
+cM20.put("Court_State","Delhi");
+cM20.put("District","South West");
+cM20.put("Petitioner_Name","RAVINDER SINGH");
+cM20.put("Respondent_Name","SUNITA AND ORS");
+cM20.put("Last_Hearing_Date","2022-03-28");
+cM20.put("Filing_Date","2016-01-01");
+cM20.put("Case_Status","Disposed");
+cM20.put("Priority","Medium");
+cM20.put("Notes","Purpose: Misc. cases/purpose | Court: Metropolitan Magistrate | Disp: DISMISSED FOR NON-PROSECUTION");
+eR20 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"DLSW020010402016\"");
+if(eR20.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR20 = zoho.creator.addRecord("your_app_name","Case_Master",cM20);
+ if(aR20.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 21: HRGR030538502018
+cM21 = Map();
+cM21.put("CNR_Number","HRGR030538502018");
+cM21.put("Case_Number","CRM/99/2018");
+cM21.put("Case_Type","Criminal Misc");
+cM21.put("Court_Name","Criminal Courts, Gurugram");
+cM21.put("Court_State","Haryana");
+cM21.put("District","Gurugram");
+cM21.put("Petitioner_Name","MAHESH");
+cM21.put("Respondent_Name","PERFECT CARGO PACKERS MOVERS");
+cM21.put("Last_Hearing_Date","2021-08-12");
+cM21.put("Filing_Date","2018-01-01");
+cM21.put("Case_Status","Disposed");
+cM21.put("Priority","Medium");
+cM21.put("Notes","Purpose: NOTICE | Court: Judicial Magistrate -  Ist Class | Disp: DISMISSED AS WITHDRAWN BEING FULLY SATISFIED");
+eR21 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030538502018\"");
+if(eR21.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR21 = zoho.creator.addRecord("your_app_name","Case_Master",cM21);
+ if(aR21.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 22: HRGR010066172017
+cM22 = Map();
+cM22.put("CNR_Number","HRGR010066172017");
+cM22.put("Case_Number","NDPS/14/2017");
+cM22.put("Case_Type","NDPS");
+cM22.put("Court_Name","District and Sessions Courts, Gurugram");
+cM22.put("Court_State","Haryana");
+cM22.put("District","Gurugram");
+cM22.put("Petitioner_Name","State of Haryana");
+cM22.put("Respondent_Name","RAKESH");
+cM22.put("Last_Hearing_Date","2021-03-24");
+cM22.put("Filing_Date","2017-01-01");
+cM22.put("Case_Status","Disposed");
+cM22.put("Priority","Medium");
+cM22.put("Notes","Purpose: Defence Evidence | Court: Additional District and Sessions Judge | Disp: ACQUITTED");
+eR22 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010066172017\"");
+if(eR22.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR22 = zoho.creator.addRecord("your_app_name","Case_Master",cM22);
+ if(aR22.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 23: HRGR010172632018
+cM23 = Map();
+cM23.put("CNR_Number","HRGR010172632018");
+cM23.put("Case_Number","ARB/350/2018");
+cM23.put("Case_Type","ARB");
+cM23.put("Court_Name","District and Sessions Courts, Gurugram");
+cM23.put("Court_State","Haryana");
+cM23.put("District","Gurugram");
+cM23.put("Petitioner_Name","M/S MAXBROS CORPORATION THROUGH PAWAN YADAV");
+cM23.put("Respondent_Name","DUROLAC PAINTS INC");
+cM23.put("Last_Hearing_Date","2026-02-18");
+cM23.put("Filing_Date","2018-01-01");
+cM23.put("Case_Status","Disposed");
+cM23.put("Priority","Medium");
+cM23.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR23 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010172632018\"");
+if(eR23.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR23 = zoho.creator.addRecord("your_app_name","Case_Master",cM23);
+ if(aR23.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 24: HRGR010035782020
+cM24 = Map();
+cM24.put("CNR_Number","HRGR010035782020");
+cM24.put("Case_Number","EXE/579/2020");
+cM24.put("Case_Type","Execution");
+cM24.put("Court_Name","District and Sessions Courts, Gurugram");
+cM24.put("Court_State","Haryana");
+cM24.put("District","Gurugram");
+cM24.put("Petitioner_Name","DUROLAC PAINTS INC.");
+cM24.put("Respondent_Name","M/S MAXBROSS CORPORATION");
+cM24.put("Last_Hearing_Date","2024-08-01");
+cM24.put("Filing_Date","2020-01-01");
+cM24.put("Case_Status","Disposed");
+cM24.put("Priority","Medium");
+cM24.put("Notes","Purpose: NOTICE | Court: Additional District and Sessions Judge | Disp: DISPOSED OF AS WITHDRAWN WITH PERMISSION TO FILE FRESH");
+eR24 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010035782020\"");
+if(eR24.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR24 = zoho.creator.addRecord("your_app_name","Case_Master",cM24);
+ if(aR24.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 25: HRGR020016102019
+cM25 = Map();
+cM25.put("CNR_Number","HRGR020016102019");
+cM25.put("Case_Number","CS/1213/2019");
+cM25.put("Case_Type","Civil Suit");
+cM25.put("Court_Name","Civil Courts, Gurugram");
+cM25.put("Court_State","Haryana");
+cM25.put("District","Gurugram");
+cM25.put("Petitioner_Name","CHANDER BHAN");
+cM25.put("Respondent_Name","SE HVPNL TS DIVISION GURUGRAM");
+cM25.put("Next_Hearing_Date","2026-07-09");
+cM25.put("Last_Hearing_Date","2026-05-07");
+cM25.put("Filing_Date","2019-01-01");
+cM25.put("Case_Status","Pending");
+cM25.put("Priority","Medium");
+cM25.put("Notes","Purpose: Defendant Evidence | Court: Civil Judge (Junior Division)");
+eR25 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR020016102019\"");
+if(eR25.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR25 = zoho.creator.addRecord("your_app_name","Case_Master",cM25);
+ if(aR25.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 26: HRGR030104222018
+cM26 = Map();
+cM26.put("CNR_Number","HRGR030104222018");
+cM26.put("Case_Number","NACT/4428/2018");
+cM26.put("Case_Type","NACT");
+cM26.put("Court_Name","Criminal Courts, Gurugram");
+cM26.put("Court_State","Haryana");
+cM26.put("District","Gurugram");
+cM26.put("Petitioner_Name","KULDEEP");
+cM26.put("Respondent_Name","M/S MEENA REALTORS BENEFIT COMPANY");
+cM26.put("Last_Hearing_Date","2024-12-02");
+cM26.put("Filing_Date","2018-01-01");
+cM26.put("Case_Status","Disposed");
+cM26.put("Priority","Medium");
+cM26.put("Notes","Purpose: Defence Evidence | Court: Judicial Magistrate -  Ist Class | Disp: DISMISSED AS WITHDRAWN BEING FULLY SATISFIED");
+eR26 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030104222018\"");
+if(eR26.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR26 = zoho.creator.addRecord("your_app_name","Case_Master",cM26);
+ if(aR26.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 27: HRGR010149432019
+cM27 = Map();
+cM27.put("CNR_Number","HRGR010149432019");
+cM27.put("Case_Number","REMP/177/2019");
+cM27.put("Case_Type","Remand Petition");
+cM27.put("Court_Name","District and Sessions Courts, Gurugram");
+cM27.put("Court_State","Haryana");
+cM27.put("District","Gurugram");
+cM27.put("Petitioner_Name","State of Haryana through PP");
+cM27.put("Respondent_Name","AJIT");
+cM27.put("Last_Hearing_Date","2020-11-25");
+cM27.put("Filing_Date","2019-01-01");
+cM27.put("Case_Status","Disposed");
+cM27.put("Priority","Medium");
+cM27.put("Notes","Purpose: Prosecution Evidence | Court: Additional District and Sessions Judge | Disp: Disposed off");
+eR27 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010149432019\"");
+if(eR27.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR27 = zoho.creator.addRecord("your_app_name","Case_Master",cM27);
+ if(aR27.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 28: HRGR030088172018
+cM28 = Map();
+cM28.put("CNR_Number","HRGR030088172018");
+cM28.put("Case_Number","CHA/991/2018");
+cM28.put("Case_Type","Criminal");
+cM28.put("Court_Name","Criminal Courts, Gurugram");
+cM28.put("Court_State","Haryana");
+cM28.put("District","Gurugram");
+cM28.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM28.put("Respondent_Name","ASHOK");
+cM28.put("Last_Hearing_Date","2025-10-03");
+cM28.put("Filing_Date","2018-01-01");
+cM28.put("Case_Status","Disposed");
+cM28.put("Priority","Medium");
+cM28.put("Notes","Purpose: Defence Evidence | Court: Judicial Magistrate -  Ist Class | Disp: ACQUITTED");
+eR28 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030088172018\"");
+if(eR28.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR28 = zoho.creator.addRecord("your_app_name","Case_Master",cM28);
+ if(aR28.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 29: HRGR030289162020
+cM29 = Map();
+cM29.put("CNR_Number","HRGR030289162020");
+cM29.put("Case_Number","CHA/1325/2020");
+cM29.put("Case_Type","Criminal");
+cM29.put("Court_Name","Criminal Courts, Gurugram");
+cM29.put("Court_State","Haryana");
+cM29.put("District","Gurugram");
+cM29.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM29.put("Respondent_Name","RAJESH YADAV");
+cM29.put("Next_Hearing_Date","2026-05-20");
+cM29.put("Last_Hearing_Date","2026-03-19");
+cM29.put("Filing_Date","2020-01-01");
+cM29.put("Case_Status","Pending");
+cM29.put("Priority","Medium");
+cM29.put("Notes","Purpose: Prosecution Evidence | Court: Judicial Magistrate -  Ist Class");
+eR29 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030289162020\"");
+if(eR29.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR29 = zoho.creator.addRecord("your_app_name","Case_Master",cM29);
+ if(aR29.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 30: HRGR030080802018
+cM30 = Map();
+cM30.put("CNR_Number","HRGR030080802018");
+cM30.put("Case_Number","CHI/754/2018");
+cM30.put("Case_Type","Criminal");
+cM30.put("Court_Name","Criminal Courts, Gurugram");
+cM30.put("Court_State","Haryana");
+cM30.put("District","Gurugram");
+cM30.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM30.put("Respondent_Name","PARIKSHIT");
+cM30.put("Last_Hearing_Date","2023-05-12");
+cM30.put("Filing_Date","2018-01-01");
+cM30.put("Case_Status","Disposed");
+cM30.put("Priority","Medium");
+cM30.put("Notes","Purpose: Defence Evidence | Court: Additional Chief Judicial Magistrate | Disp: ACQUITTED");
+eR30 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030080802018\"");
+if(eR30.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR30 = zoho.creator.addRecord("your_app_name","Case_Master",cM30);
+ if(aR30.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 31: HRGR030260082020
+cM31 = Map();
+cM31.put("CNR_Number","HRGR030260082020");
+cM31.put("Case_Number","CHI/1712/2020");
+cM31.put("Case_Type","Criminal");
+cM31.put("Court_Name","Criminal Courts, Gurugram");
+cM31.put("Court_State","Haryana");
+cM31.put("District","Gurugram");
+cM31.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM31.put("Respondent_Name","SANDEEP @ SANNY");
+cM31.put("Last_Hearing_Date","2023-10-04");
+cM31.put("Filing_Date","2020-01-01");
+cM31.put("Case_Status","Disposed");
+cM31.put("Priority","Medium");
+cM31.put("Notes","Purpose: Prosecution Evidence | Court: Judicial Magistrate -  Ist Class | Disp: ACQUITTED");
+eR31 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030260082020\"");
+if(eR31.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR31 = zoho.creator.addRecord("your_app_name","Case_Master",cM31);
+ if(aR31.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 32: HRGR030013872019
+cM32 = Map();
+cM32.put("CNR_Number","HRGR030013872019");
+cM32.put("Case_Number","CHA/84/2019");
+cM32.put("Case_Type","Criminal");
+cM32.put("Court_Name","Criminal Courts, Gurugram");
+cM32.put("Court_State","Haryana");
+cM32.put("District","Gurugram");
+cM32.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM32.put("Respondent_Name","subhash chand");
+cM32.put("Last_Hearing_Date","2025-08-01");
+cM32.put("Filing_Date","2019-01-01");
+cM32.put("Case_Status","Disposed");
+cM32.put("Priority","Medium");
+cM32.put("Notes","Purpose: Prosecution Evidence | Court: Judicial Magistrate -  Ist Class | Disp: ACQUITTED");
+eR32 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030013872019\"");
+if(eR32.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR32 = zoho.creator.addRecord("your_app_name","Case_Master",cM32);
+ if(aR32.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 33: HRGR030772132018
+cM33 = Map();
+cM33.put("CNR_Number","HRGR030772132018");
+cM33.put("Case_Number","CHA/7761/2018");
+cM33.put("Case_Type","Criminal");
+cM33.put("Court_Name","Criminal Courts, Gurugram");
+cM33.put("Court_State","Haryana");
+cM33.put("District","Gurugram");
+cM33.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM33.put("Respondent_Name","NIKKU");
+cM33.put("Next_Hearing_Date","2026-05-21");
+cM33.put("Last_Hearing_Date","2025-11-10");
+cM33.put("Filing_Date","2018-01-01");
+cM33.put("Case_Status","Pending");
+cM33.put("Priority","Medium");
+cM33.put("Notes","Purpose: NOTICE | Court: Judicial Magistrate -  Ist Class");
+eR33 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030772132018\"");
+if(eR33.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR33 = zoho.creator.addRecord("your_app_name","Case_Master",cM33);
+ if(aR33.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 34: HRGR030620042019
+cM34 = Map();
+cM34.put("CNR_Number","HRGR030620042019");
+cM34.put("Case_Number","CHI/2440/2019");
+cM34.put("Case_Type","Criminal");
+cM34.put("Court_Name","Criminal Courts, Gurugram");
+cM34.put("Court_State","Haryana");
+cM34.put("District","Gurugram");
+cM34.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM34.put("Respondent_Name","CHANDER BHAN");
+cM34.put("Next_Hearing_Date","2022-01-17");
+cM34.put("Last_Hearing_Date","2022-01-17");
+cM34.put("Filing_Date","2019-01-01");
+cM34.put("Case_Status","Pending");
+cM34.put("Priority","Medium");
+cM34.put("Notes","Purpose: AWAITING ORDER | Court: Judicial Magistrate -  Ist Class | Disp: PROCEEDINGS DROPPED/ABATED");
+eR34 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030620042019\"");
+if(eR34.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR34 = zoho.creator.addRecord("your_app_name","Case_Master",cM34);
+ if(aR34.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 35: HRGR010052062019
+cM35 = Map();
+cM35.put("CNR_Number","HRGR010052062019");
+cM35.put("Case_Number","MACP/252/2019");
+cM35.put("Case_Type","MACT");
+cM35.put("Court_Name","District and Sessions Courts, Gurugram");
+cM35.put("Court_State","Haryana");
+cM35.put("District","Gurugram");
+cM35.put("Petitioner_Name","MANJU DEVI");
+cM35.put("Respondent_Name","SATISH KUMAR");
+cM35.put("Last_Hearing_Date","2023-03-03");
+cM35.put("Filing_Date","2019-01-01");
+cM35.put("Case_Status","Disposed");
+cM35.put("Priority","Medium");
+cM35.put("Notes","Purpose: Rebuttal | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR35 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010052062019\"");
+if(eR35.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR35 = zoho.creator.addRecord("your_app_name","Case_Master",cM35);
+ if(aR35.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 36: HRGR010160952019
+cM36 = Map();
+cM36.put("CNR_Number","HRGR010160952019");
+cM36.put("Case_Number","CRM/277/2019");
+cM36.put("Case_Type","Criminal Misc");
+cM36.put("Court_Name","District and Sessions Courts, Gurugram");
+cM36.put("Court_State","Haryana");
+cM36.put("District","Gurugram");
+cM36.put("Petitioner_Name","XXXXXXX");
+cM36.put("Respondent_Name","XXXXXXX");
+cM36.put("Last_Hearing_Date","2022-07-18");
+cM36.put("Filing_Date","2019-01-01");
+cM36.put("Case_Status","Disposed");
+cM36.put("Priority","Medium");
+cM36.put("Notes","Purpose: Arguments | Court: Principal District Judge (Family Court) | Disp: DISPOSED OF AS WITHDRAWN");
+eR36 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010160952019\"");
+if(eR36.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR36 = zoho.creator.addRecord("your_app_name","Case_Master",cM36);
+ if(aR36.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 37: HRGR030005162021
+cM37 = Map();
+cM37.put("CNR_Number","HRGR030005162021");
+cM37.put("Case_Number","CHI/58/2021");
+cM37.put("Case_Type","Criminal");
+cM37.put("Court_Name","Criminal Courts, Gurugram");
+cM37.put("Court_State","Haryana");
+cM37.put("District","Gurugram");
+cM37.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM37.put("Respondent_Name","NITYANAND");
+cM37.put("Next_Hearing_Date","2026-07-29");
+cM37.put("Last_Hearing_Date","2026-05-16");
+cM37.put("Filing_Date","2021-01-01");
+cM37.put("Case_Status","Pending");
+cM37.put("Priority","Medium");
+cM37.put("Notes","Purpose: Prosecution Evidence | Court: Judicial Magistrate -  Ist Class");
+eR37 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030005162021\"");
+if(eR37.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR37 = zoho.creator.addRecord("your_app_name","Case_Master",cM37);
+ if(aR37.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 38: HRGR010011002021
+cM38 = Map();
+cM38.put("CNR_Number","HRGR010011002021");
+cM38.put("Case_Number","BA/317/2021");
+cM38.put("Case_Type","Bail Application");
+cM38.put("Court_Name","District and Sessions Courts, Gurugram");
+cM38.put("Court_State","Haryana");
+cM38.put("District","Gurugram");
+cM38.put("Petitioner_Name","SATISH @ SATISH KUMAR ETC");
+cM38.put("Respondent_Name","State of Haryana");
+cM38.put("Last_Hearing_Date","2021-02-11");
+cM38.put("Filing_Date","2021-01-01");
+cM38.put("Case_Status","Disposed");
+cM38.put("Priority","Medium");
+cM38.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: ALLOWED");
+eR38 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010011002021\"");
+if(eR38.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR38 = zoho.creator.addRecord("your_app_name","Case_Master",cM38);
+ if(aR38.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 39: HRGR030172612015
+cM39 = Map();
+cM39.put("CNR_Number","HRGR030172612015");
+cM39.put("Case_Number","CHI/4779/2015");
+cM39.put("Case_Type","Criminal");
+cM39.put("Court_Name","Criminal Courts, Gurugram");
+cM39.put("Court_State","Haryana");
+cM39.put("District","Gurugram");
+cM39.put("Petitioner_Name","State of Haryana");
+cM39.put("Respondent_Name","SAHEJ KHANNA");
+cM39.put("Last_Hearing_Date","2025-05-26");
+cM39.put("Filing_Date","2015-01-01");
+cM39.put("Case_Status","Disposed");
+cM39.put("Priority","Medium");
+cM39.put("Notes","Purpose: Defence Evidence | Court: Judicial Magistrate -  Ist Class | Disp: CONVICTED");
+eR39 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030172612015\"");
+if(eR39.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR39 = zoho.creator.addRecord("your_app_name","Case_Master",cM39);
+ if(aR39.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 40: HRGR010011522021
+cM40 = Map();
+cM40.put("CNR_Number","HRGR010011522021");
+cM40.put("Case_Number","BA/331/2021");
+cM40.put("Case_Type","Bail Application");
+cM40.put("Court_Name","District and Sessions Courts, Gurugram");
+cM40.put("Court_State","Haryana");
+cM40.put("District","Gurugram");
+cM40.put("Petitioner_Name","SONU");
+cM40.put("Respondent_Name","State of Haryana");
+cM40.put("Last_Hearing_Date","2021-02-04");
+cM40.put("Filing_Date","2021-01-01");
+cM40.put("Case_Status","Disposed");
+cM40.put("Priority","Medium");
+cM40.put("Notes","Purpose: NOTICE | Court: Additional District and Sessions Judge | Disp: Dismissed");
+eR40 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010011522021\"");
+if(eR40.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR40 = zoho.creator.addRecord("your_app_name","Case_Master",cM40);
+ if(aR40.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 41: HRGR020006802021
+cM41 = Map();
+cM41.put("CNR_Number","HRGR020006802021");
+cM41.put("Case_Number","CS/598/2021");
+cM41.put("Case_Type","Civil Suit");
+cM41.put("Court_Name","Civil Courts, Gurugram");
+cM41.put("Court_State","Haryana");
+cM41.put("District","Gurugram");
+cM41.put("Petitioner_Name","DAYAWATI");
+cM41.put("Respondent_Name","SDO, DAKSHIN HARYANA BIJLI VITRAN NIGAM LIMITED");
+cM41.put("Last_Hearing_Date","2022-10-07");
+cM41.put("Filing_Date","2021-01-01");
+cM41.put("Case_Status","Disposed");
+cM41.put("Priority","Medium");
+cM41.put("Notes","Purpose: Reply | Court: Civil Judge (Junior Division) | Disp: DISMISSED AS WITHDRAWN BEING FULLY SATISFIED");
+eR41 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR020006802021\"");
+if(eR41.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR41 = zoho.creator.addRecord("your_app_name","Case_Master",cM41);
+ if(aR41.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 42: HRGR030113272021
+cM42 = Map();
+cM42.put("CNR_Number","HRGR030113272021");
+cM42.put("Case_Number","CHI/605/2021");
+cM42.put("Case_Type","Criminal");
+cM42.put("Court_Name","Criminal Courts, Gurugram");
+cM42.put("Court_State","Haryana");
+cM42.put("District","Gurugram");
+cM42.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM42.put("Respondent_Name","AJIT SINGH");
+cM42.put("Next_Hearing_Date","2026-06-06");
+cM42.put("Last_Hearing_Date","2026-05-07");
+cM42.put("Filing_Date","2021-01-01");
+cM42.put("Case_Status","Pending");
+cM42.put("Priority","Medium");
+cM42.put("Notes","Purpose: WARRANT | Court: Judicial Magistrate -  Ist Class");
+eR42 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030113272021\"");
+if(eR42.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR42 = zoho.creator.addRecord("your_app_name","Case_Master",cM42);
+ if(aR42.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 43: HRGR010074372019
+cM43 = Map();
+cM43.put("CNR_Number","HRGR010074372019");
+cM43.put("Case_Number","CRR/200/2019");
+cM43.put("Case_Type","Criminal Revision");
+cM43.put("Court_Name","District and Sessions Courts, Gurugram");
+cM43.put("Court_State","Haryana");
+cM43.put("District","Gurugram");
+cM43.put("Petitioner_Name","SUNIL SIMON");
+cM43.put("Respondent_Name","State of Haryana");
+cM43.put("Last_Hearing_Date","2021-03-03");
+cM43.put("Filing_Date","2019-01-01");
+cM43.put("Case_Status","Disposed");
+cM43.put("Priority","Medium");
+cM43.put("Notes","Purpose: Arguments | Court: Additional District and Sessions Judge | Disp: DISMISSED AS WITHDRAWN BEING FULLY SATISFIED");
+eR43 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010074372019\"");
+if(eR43.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR43 = zoho.creator.addRecord("your_app_name","Case_Master",cM43);
+ if(aR43.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 44: HRGR030002212020
+cM44 = Map();
+cM44.put("CNR_Number","HRGR030002212020");
+cM44.put("Case_Number","UCR/4/2020");
+cM44.put("Case_Type","Unregistered Crime");
+cM44.put("Court_Name","Criminal Courts, Gurugram");
+cM44.put("Court_State","Haryana");
+cM44.put("District","Gurugram");
+cM44.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM44.put("Respondent_Name","UNKNOWN");
+cM44.put("Last_Hearing_Date","2022-09-06");
+cM44.put("Filing_Date","2020-01-01");
+cM44.put("Case_Status","Disposed");
+cM44.put("Priority","Medium");
+cM44.put("Notes","Purpose: CONSIDERATION | Court: Judicial Magistrate -  Ist Class | Disp: Disposed off");
+eR44 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030002212020\"");
+if(eR44.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR44 = zoho.creator.addRecord("your_app_name","Case_Master",cM44);
+ if(aR44.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 45: HRGR020022012017
+cM45 = Map();
+cM45.put("CNR_Number","HRGR020022012017");
+cM45.put("Case_Number","CS/1534/2017");
+cM45.put("Case_Type","Civil Suit");
+cM45.put("Court_Name","Civil Courts, Gurugram");
+cM45.put("Court_State","Haryana");
+cM45.put("District","Gurugram");
+cM45.put("Petitioner_Name","NAVDEEP WADHWA");
+cM45.put("Respondent_Name","M/S POSH TECHNOLOGIES");
+cM45.put("Next_Hearing_Date","2026-07-18");
+cM45.put("Last_Hearing_Date","2026-05-16");
+cM45.put("Filing_Date","2017-01-01");
+cM45.put("Case_Status","Pending");
+cM45.put("Priority","Medium");
+cM45.put("Notes","Purpose: Defendant Evidence | Court: Civil Judge (Junior Division)");
+eR45 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR020022012017\"");
+if(eR45.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR45 = zoho.creator.addRecord("your_app_name","Case_Master",cM45);
+ if(aR45.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 46: HRGR030207632021
+cM46 = Map();
+cM46.put("CNR_Number","HRGR030207632021");
+cM46.put("Case_Number","REMP/110/2021");
+cM46.put("Case_Type","Remand Petition");
+cM46.put("Court_Name","Criminal Courts, Gurugram");
+cM46.put("Court_State","Haryana");
+cM46.put("District","Gurugram");
+cM46.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM46.put("Respondent_Name","KULDEEP");
+cM46.put("Last_Hearing_Date","2021-06-08");
+cM46.put("Filing_Date","2021-01-01");
+cM46.put("Case_Status","Disposed");
+cM46.put("Priority","Medium");
+cM46.put("Notes","Purpose: Appearance | Court: Judicial Magistrate -  Ist Class | Disp: Disposed off");
+eR46 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030207632021\"");
+if(eR46.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR46 = zoho.creator.addRecord("your_app_name","Case_Master",cM46);
+ if(aR46.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 47: HRGR020007312021
+cM47 = Map();
+cM47.put("CNR_Number","HRGR020007312021");
+cM47.put("Case_Number","CS/641/2021");
+cM47.put("Case_Type","Civil Suit");
+cM47.put("Court_Name","Civil Courts, Gurugram");
+cM47.put("Court_State","Haryana");
+cM47.put("District","Gurugram");
+cM47.put("Petitioner_Name","ARUN KUMAR");
+cM47.put("Respondent_Name","DUSHYANT @DHANPAT");
+cM47.put("Next_Hearing_Date","2026-07-22");
+cM47.put("Last_Hearing_Date","2026-04-17");
+cM47.put("Filing_Date","2021-01-01");
+cM47.put("Case_Status","Pending");
+cM47.put("Priority","Medium");
+cM47.put("Notes","Purpose: PRESENCE | Court: Civil Judge (Junior Division)");
+eR47 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR020007312021\"");
+if(eR47.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR47 = zoho.creator.addRecord("your_app_name","Case_Master",cM47);
+ if(aR47.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 48: HRGR010061162019
+cM48 = Map();
+cM48.put("CNR_Number","HRGR010061162019");
+cM48.put("Case_Number","EXE/811/2019");
+cM48.put("Case_Type","Execution");
+cM48.put("Court_Name","District and Sessions Courts, Gurugram");
+cM48.put("Court_State","Haryana");
+cM48.put("District","Gurugram");
+cM48.put("Petitioner_Name","SATYA DEVELOPERS PVT LTD");
+cM48.put("Respondent_Name","SUBHASH RAWAL");
+cM48.put("Next_Hearing_Date","2026-08-03");
+cM48.put("Last_Hearing_Date","2026-03-18");
+cM48.put("Filing_Date","2019-01-01");
+cM48.put("Case_Status","Pending");
+cM48.put("Priority","Medium");
+cM48.put("Notes","Purpose: AWAITING ORDER | Court: Additional District and Sessions Judge");
+eR48 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR010061162019\"");
+if(eR48.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR48 = zoho.creator.addRecord("your_app_name","Case_Master",cM48);
+ if(aR48.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 49: HRGR030229072021
+cM49 = Map();
+cM49.put("CNR_Number","HRGR030229072021");
+cM49.put("Case_Number","NACT/12882/2021");
+cM49.put("Case_Type","NACT");
+cM49.put("Court_Name","Criminal Courts, Gurugram");
+cM49.put("Court_State","Haryana");
+cM49.put("District","Gurugram");
+cM49.put("Petitioner_Name","SUNIL BISHNOI");
+cM49.put("Respondent_Name","SATPARKASH AND SONS");
+cM49.put("Next_Hearing_Date","2026-07-10");
+cM49.put("Last_Hearing_Date","2026-03-19");
+cM49.put("Filing_Date","2021-01-01");
+cM49.put("Case_Status","Pending");
+cM49.put("Priority","Medium");
+cM49.put("Notes","Purpose: Evidence | Court: Judicial Magistrate -  Ist Class");
+eR49 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030229072021\"");
+if(eR49.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR49 = zoho.creator.addRecord("your_app_name","Case_Master",cM49);
+ if(aR49.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+// Case 50: HRGR030081562017
+cM50 = Map();
+cM50.put("CNR_Number","HRGR030081562017");
+cM50.put("Case_Number","CHI/465/2017");
+cM50.put("Case_Type","Criminal");
+cM50.put("Court_Name","Criminal Courts, Gurugram");
+cM50.put("Court_State","Haryana");
+cM50.put("District","Gurugram");
+cM50.put("Petitioner_Name","STATE OF HARYANA THROUGH APP");
+cM50.put("Respondent_Name","RAJESH KUMAR");
+cM50.put("Next_Hearing_Date","2025-09-15");
+cM50.put("Last_Hearing_Date","2025-09-15");
+cM50.put("Filing_Date","2017-01-01");
+cM50.put("Case_Status","Pending");
+cM50.put("Priority","Medium");
+cM50.put("Notes","Purpose: PRESENCE | Court: Judicial Magistrate -  Ist Class | Disp: CONSIGNED AFTER PROCEEDING U/S 299 CR.P.C");
+eR50 = zoho.creator.getRecords("your_app_name","Case_Master","CNR_Number == \"HRGR030081562017\"");
+if(eR50.size() > 0)
+{
+ dupCount = dupCount + 1;
+}
+else
+{
+ aR50 = zoho.creator.addRecord("your_app_name","Case_Master",cM50);
+ if(aR50.get("code") == 200)
+ { okCount = okCount + 1; }
+ else
+ { failCount = failCount + 1; }
+}
+
+info "Part 1/12 done. OK=" + okCount + " Dup=" + dupCount + " Fail=" + failCount;

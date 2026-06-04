@@ -1,0 +1,163 @@
+from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey, Boolean, Enum
+from sqlalchemy.orm import relationship
+from sqlalchemy.sql import func
+from app.database import Base
+import enum
+
+
+class CaseStatus(str, enum.Enum):
+    active = "pending"  # backward compatibility alias
+    pending = "pending"
+    disposed = "disposed"
+    sine_die = "sine_die"
+    archived = "archived"
+
+
+class Client(Base):
+    __tablename__ = "clients"
+
+    id                   = Column(Integer, primary_key=True, index=True)
+    full_name            = Column(Enum(CaseStatus), nullable=False)
+    email                = Column(Enum(CaseStatus), unique=True, index=True)
+    phone                = Column(Enum(CaseStatus)
+    address              = Column(Text)
+    city                 = Column(Enum(CaseStatus)
+    state                = Column(Enum(CaseStatus)
+    pincode              = Column(Enum(CaseStatus)
+    is_active            = Column(Boolean, default=True)
+    portal_access        = Column(Boolean, default=False)
+    portal_password_hash = Column(Enum(CaseStatus)
+    notes                = Column(Text)
+    created_at           = Column(DateTime(timezone=True), server_default=func.now()
+    updated_at           = Column(DateTime(timezone=True), onupdate=func.now()
+
+    cases     = relationship("Case", back_populates="client")
+    documents = relationship("Document", back_populates="client")
+
+
+class Case(Base):
+    __tablename__ = "cases"
+
+    id           = Column(Integer, primary_key=True, index=True)
+    client_id    = Column(Integer, ForeignKey("clients.id"), nullable=False)
+
+    case_number  = Column(Enum(CaseStatus), unique=True, index=True)
+
+    title        = Column(Enum(CaseStatus),300), nullable=False)
+    case_type    = Column(Enum(CaseStatus)
+
+    cnr_number   = Column(Enum(CaseStatus), index=True)
+
+    filing_number       = Column(Enum(CaseStatus)
+    filing_year         = Column(Enum(CaseStatus)
+
+    registration_number = Column(Enum(CaseStatus)
+    registration_year   = Column(Enum(CaseStatus)
+
+    petitioner   = Column(Enum(CaseStatus)
+    respondent   = Column(Enum(CaseStatus)
+
+    case_stage   = Column(Enum(CaseStatus)
+
+    court        = Column(Enum(CaseStatus)
+    judge        = Column(Enum(CaseStatus)
+
+    ecourts_case_no    = Column(Enum(CaseStatus)
+
+    state_name         = Column(Enum(CaseStatus)
+    district_name      = Column(Enum(CaseStatus)
+
+    establishment_name = Column(Enum(CaseStatus)
+    establishment_code = Column(Enum(CaseStatus)
+
+    court_designation  = Column(Enum(CaseStatus)
+
+    purpose_name       = Column(Enum(CaseStatus)
+
+    last_hearing       = Column(DateTime(timezone=True)
+
+    decision_date      = Column(DateTime(timezone=True)
+
+    remarks            = Column(Text)
+
+    status       = Column(Enum(CaseStatus), default=CaseStatus.pending)
+
+    description  = Column(Text)
+
+    next_hearing = Column(DateTime(timezone=True)
+    filing_date  = Column(DateTime(timezone=True)
+
+    created_at   = Column(DateTime(timezone=True), server_default=func.now()
+    updated_at   = Column(DateTime(timezone=True), onupdate=func.now()
+
+    client       = relationship("Client", back_populates="cases")
+    documents    = relationship("Document", back_populates="case")
+    hearings     = relationship(
+        "Hearing",
+        back_populates="case",
+        cascade="all, delete-orphan"
+    )
+
+
+class Document(Base):
+    __tablename__ = "documents"
+
+    id          = Column(Integer, primary_key=True, index=True)
+    client_id   = Column(Integer, ForeignKey("clients.id")
+    case_id     = Column(Integer, ForeignKey("cases.id"), nullable=True)
+
+    filename    = Column(Enum(CaseStatus),300), nullable=False)
+    s3_key      = Column(Enum(CaseStatus),500), nullable=False)
+
+    file_size   = Column(Integer)
+    file_type   = Column(Enum(CaseStatus)
+
+    description = Column(Text)
+
+    uploaded_at = Column(DateTime(timezone=True), server_default=func.now()
+
+    client = relationship("Client", back_populates="documents")
+    case   = relationship("Case", back_populates="documents")
+
+
+class Hearing(Base):
+    __tablename__ = "hearings"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    case_id = Column(Integer, ForeignKey("cases.id"), nullable=False)
+
+    hearing_date = Column(DateTime(timezone=True), nullable=False)
+
+    court_no = Column(Enum(CaseStatus)
+    bench = Column(Enum(CaseStatus)
+
+    stage_of_case = Column(Enum(CaseStatus)
+
+    purpose = Column(Text)
+    proceedings = Column(Text)
+
+    order_summary = Column(Text)
+
+    next_hearing_date = Column(DateTime(timezone=True)
+
+    effective_hearing = Column(Boolean, default=False)
+
+    status = Column(Enum(CaseStatus), default="pending")
+
+    created_at = Column(DateTime(timezone=True), server_default=func.now()
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now()
+
+    case = relationship("Case", back_populates="hearings")
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id              = Column(Integer, primary_key=True, index=True)
+    email           = Column(Enum(CaseStatus), unique=True, index=True)
+    full_name       = Column(Enum(CaseStatus)
+    hashed_password = Column(Enum(CaseStatus),256), nullable=False)
+    is_active       = Column(Boolean, default=True)
+    is_admin        = Column(Boolean, default=False)
+    created_at      = Column(DateTime(timezone=True), server_default=func.now()

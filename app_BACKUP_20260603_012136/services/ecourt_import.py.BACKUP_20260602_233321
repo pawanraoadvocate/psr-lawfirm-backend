@@ -1,0 +1,82 @@
+import json
+from sqlalchemy import text
+from app.database import engine
+
+
+def normalize_item(item):
+    if isinstance(item, dict):
+        return item
+    if isinstance(item, str):
+        try:
+            return json.loads(item)
+        except:
+            return None
+    return None
+
+
+def import_ecourt_json(raw_json: str):
+
+    data = json.loads(raw_json)
+
+    if isinstance(data, dict):
+        data = data.get("data") or data.get("results") or data
+
+    inserted = 0
+
+    with engine.begin() as conn:
+        for item in data:
+
+            item = normalize_item(item)
+            if not item:
+                continue
+
+            case_number = item.get("cino") or item.get("case_no") or item.get("case_number")
+
+            title = f"{item.get('petparty_name','')} vs {item.get('resparty_name','')}"
+
+            case_type = item.get("type_name") or item.get("case_type")
+            court = item.get("establishment_name") or item.get("court")
+            judge = item.get("court_no_desg_name") or item.get("judge")
+
+            status_raw = (item.get("disp_name") or "").lower()
+
+            if "allowed" in status_raw:
+                status = "active"
+            elif "dismissed" in status_raw:
+                status = "disposed"
+            else:
+                status = "pending"
+
+            conn.execute(text("""
+                INSERT OR IGNORE INTO cases (
+                    case_number,
+                    title,
+                    case_type,
+                    court,
+                    judge,
+                    status
+                )
+                VALUES (
+                    :case_number,
+                    :title,
+                    :case_type,
+                    :court,
+                    :judge,
+                    :status
+                )
+            """), {
+                "case_number": case_number,
+                "title": title,
+                "case_type": case_type,
+                "court": court,
+                "judge": judge,
+                "status": status
+            })
+
+            inserted += 1
+
+    return {
+        "status": "ok",
+        "inserted": inserted,
+        "total_input": len(data)
+    }

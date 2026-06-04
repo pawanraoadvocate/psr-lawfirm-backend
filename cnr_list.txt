@@ -1,0 +1,5 @@
+# cnr_list.txt  — one CNR per line, lines starting with # are ignored
+DLHC010012342023
+MHAU010056782022
+KKAR020098762021
+TNCH030011112023

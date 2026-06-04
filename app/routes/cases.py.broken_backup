@@ -1,0 +1,35 @@
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, File
+from sqlalchemy.orm import Session
+from typing import List, Optional
+from datetime import datetime
+import random, string, json
+from app.database import get_db
+from app import models, schemas
+from app.utils.auth import get_current_user
+
+router = APIRouter()
+
+
+def generate_case_number() -> str:
+    year = datetime.now().year
+    suffix = "".join(random.choices(string.ascii_uppercase + string.digits, k=4))
+    return f"PSR-{year}-{suffix}"
+
+
+@router.get("/", response_model=List[schemas.CaseOut])
+def list_cases(
+    client_id: Optional[int] = None,
+    status: Optional[str] = None,
+    skip: int = 0,
+    limit: int = 1000,
+    db: Session = Depends(get_db),
+    _=Depends(get_current_user),
+):
+    q = db.query(models.Case)
+    if client_id:
+        q = q.filter(models.Case.client_id == client_id)
+    if status:
+        q = q.filter(models.Case.status == status)
+    
+    return q.offset(skip).limit(limit).all()
+except Exception as e:
